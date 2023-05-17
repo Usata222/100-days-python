@@ -382,35 +382,86 @@
 
 # Hang man game
 
-word_list = ['ardvark', 'baboon', 'camel']
+# word_list = ['ardvark', 'baboon', 'camel']
 
-import random
+# import random
 
-chosen_word = random.choice(word_list)
-
-
-
-
-display = []
-for _ in range(len(chosen_word)) :
-    display += "_"
-print(display)
-
-
-guess = input('Guess a letter').lower()
+# chosen_word = random.choice(word_list)
 
 
 
 
-for letter in chosen_word:
-    if letter == guess:
-        print('Right')
-    else:
-        print('wrong')
+# display = []
+# for _ in range(len(chosen_word)) :
+#     display += "_"
+# print(display)
 
 
+# guess = input('Guess a letter').lower()
+
+
+
+
+# for letter in chosen_word:
+#     if letter == guess:
+#         print('Right')
+#     else:
+#         print('wrong')
 
 
 
 
 
+
+# Functions with input
+
+# def greet():
+#     print('Hello')
+#     print('How do you do')
+#     print("Isn't the weather nice today")
+
+# greet()
+
+
+# def greet_with_name(name):
+#     print(f"hello {name}")
+#     print(f"how do you do {name}?")
+
+# greet_with_name("usata")
+
+
+
+
+
+# functions with more than 1 input
+
+# def greet_with(name, location):
+#     print(f"hello {name}")
+#     print(f"what is it like in {location}")
+
+# greet_with(name="Jane", location="Abuja")
+#         #  or
+# greet_with("Jane", "Abuja")
+
+
+
+
+
+# Ceasar cipher
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+
+def encrypt(plain_text, shift_amount):
+    cipher_text = ""
+    for letter in plain_text:
+        position = alphabet.index(letter)
+        new_position = position + shift_amount
+        new_letter = alphabet[new_position]
+        cipher_text += new_letter
+        print(f"The encoded text is {cipher_text}")
+    print(cipher_text)
