@@ -449,19 +449,124 @@
 
 # Ceasar cipher
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
 
 
-def encrypt(plain_text, shift_amount):
-    cipher_text = ""
-    for letter in plain_text:
-        position = alphabet.index(letter)
-        new_position = position + shift_amount
-        new_letter = alphabet[new_position]
-        cipher_text += new_letter
-        print(f"The encoded text is {cipher_text}")
-    print(cipher_text)
+# def encrypt(plain_text, shift_amount):
+#     cipher_text = ""
+#     for letter in plain_text:
+#         position = alphabet.index(letter)
+#         new_position = position + shift_amount
+#         new_letter = alphabet[new_position]
+#         cipher_text += new_letter
+#         print(f"The encoded text is {cipher_text}")
+
+#         print(cipher_text)
+
+# encrypt(plain_text=text, shift_amount=shift)
+
+
+
+
+
+
+
+
+# Dictionaries
+
+# programming_dictionary = {
+#     "Bug": "an error in a code",
+#     "functions": "A piece of code than can be easily called over",
+# }
+
+# adding items to dictionary
+
+# programming_dictionary["Loop"] = "The action of doing someing over and over"
+
+
+# to empty dictionary
+
+# programming_dictionary = {}
+
+
+
+# Loop through dictionary
+
+# for key in programming_dictionary:
+#     print(key)
+#     print(programming_dictionary[key])
+
+
+
+
+
+# Grading program
+
+# student_scores = {
+#     "Harry": 91,
+#     "Ron": 88,
+#     "Will": 71,
+#     "Nash": 50,
+# }
+
+
+# student_grade = {}
+
+# for student in student_scores:
+#     score = student_scores[student]
+#     if score > 90:
+#         student_grade[student] = "Exellent"
+#     elif score > 80:
+#         student_grade[student] = "Good"
+#     elif score > 70:
+#         student_grade[student] = "Not bad"
+#     else:
+#         student_grade[student] = "Fail"
+
+
+# print(student_grade)     
+
+
+
+# Nesting Lists and dictionaries
+
+# travel_log = {
+#     "France": {"cities_visited": ["paris", "Lille", "Dijon"], "total_visit": 12},
+#     "Germany": {"cities_visited": ["Berlin", "Hamburg", "Stuttgart"], "total_visits": 5}
+# }
+
+
+
+
+# Secret Auction Program
+
+
+bid = {}
+bidding_finished = False 
+
+
+def find_highest_bidder(bidding_record):
+    highest_bid = 0
+    winner = ""
+
+    for bidder in bidding_record:
+        bid_amount = bidding_record[bidder]
+        if bid_amount > highest_bid:
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}")
+
+while not bidding_finished:
+    name = input("what is your name?")
+    price = input("What is your bid? $")
+    bid[name] = price
+    should_continue =  input("Are there any other bidders? Type 'yes or no'.")
+    if should_continue == "no":
+        bidding_finished = True
+        find_highest_bidder(bid)
+    elif should_continue == "yes":
+        print("2")
+
