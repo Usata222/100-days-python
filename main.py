@@ -545,28 +545,90 @@
 # Secret Auction Program
 
 
-bid = {}
-bidding_finished = False 
+# bid = {}
+# bidding_finished = False 
 
 
-def find_highest_bidder(bidding_record):
-    highest_bid = 0
-    winner = ""
+# def find_highest_bidder(bidding_record):
+#     highest_bid = 0
+#     winner = ""
 
-    for bidder in bidding_record:
-        bid_amount = bidding_record[bidder]
-        if bid_amount > highest_bid:
-            winner = bidder
-    print(f"The winner is {winner} with a bid of ${highest_bid}")
+#     for bidder in bidding_record:
+#         bid_amount = bidding_record[bidder]
+#         if bid_amount > highest_bid:
+#             winner = bidder
+#     print(f"The winner is {winner} with a bid of ${highest_bid}")
 
-while not bidding_finished:
-    name = input("what is your name?")
-    price = input("What is your bid? $")
-    bid[name] = price
-    should_continue =  input("Are there any other bidders? Type 'yes or no'.")
-    if should_continue == "no":
-        bidding_finished = True
-        find_highest_bidder(bid)
-    elif should_continue == "yes":
-        print("2")
+# while not bidding_finished:
+#     name = input("what is your name?")
+#     price = input("What is your bid? $")
+#     bid[name] = price
+#     should_continue =  input("Are there any other bidders? Type 'yes or no'.")
+#     if should_continue == "no":
+#         bidding_finished = True
+#         find_highest_bidder(bid)
+#     elif should_continue == "yes":
+#         print("2")
 
+
+
+
+
+# Functions with output
+
+# def format_name(f_name, l_name):
+#     print(f_name.title())
+#     print(l_name.title())
+
+# format_name("angela", "ANGELA")
+
+
+
+# def format_name(f_name, l_name):
+#     if f_name == "" or l_name == "":
+#         return "you did not provide an input."
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"Result: {formated_f_name} {formated_l_name}"
+
+# format_name("angela", "ANGELA")
+
+
+
+# # Calculator
+
+# #Add
+# def add(n1, n2):
+#     return n1 + n2
+
+# #Subtract
+# def subtract(n1, n2):
+#     return n1 - n2
+
+# #Multiply
+# def multiply(n1, n2):
+#     return n1 * n2
+
+# #Divide
+# def divide(n1, n2):
+#     return n1 / n2
+
+# selector = {
+#     "-":subtract,
+#     "+":add,
+#     "*":multiply,
+#     "/":divide
+#     }
+
+# num1 = int(input("First number:\n"))
+# num2 = int(input("Second number:\n"))
+# for symbol in selector:
+#     print(symbol)
+
+# selector_symbol = input("Pick an operation from the line above:\n")
+
+# cal_function = selector[selector_symbol]
+
+# answer = cal_function(num1, num2)
+
+# print(f"{num1} {selector_symbol} {num2} = {answer}")
