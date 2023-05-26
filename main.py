@@ -632,3 +632,39 @@
 # answer = cal_function(num1, num2)
 
 # print(f"{num1} {selector_symbol} {num2} = {answer}")
+
+
+
+# Black Jack
+
+
+
+# your_card = random.choice(cards)
+# print(your_card)
+
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10]
+
+import random
+
+num1 = random.choice(cards)
+num2 = random.choice(cards)
+# num3 = random.choice(cards)
+print(num1, num2)
+
+
+
+for r in cards:
+  new_card = input("Type 'y' to get a new card and 'n' to pass:\n").lower()
+  if new_card == 'y':
+    new_num = r
+  elif new_card == 'n':
+    print(StopIteration("fine"))
+  
+
+  
+  
+
+    
+
+
