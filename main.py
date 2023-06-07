@@ -643,28 +643,127 @@
 # print(your_card)
 
 
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10]
+# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10]
 
-import random
+# import random
 
-num1 = random.choice(cards)
-num2 = random.choice(cards)
-# num3 = random.choice(cards)
-print(num1, num2)
-
+# num1 = random.choice(cards)
+# num2 = random.choice(cards)
+# print(f'your cards are: {num1, num2}')
 
 
-for r in cards:
-  new_card = input("Type 'y' to get a new card and 'n' to pass:\n").lower()
-  if new_card == 'y':
-    new_num = r
-  elif new_card == 'n':
-    print(StopIteration("fine"))
-  
+# # Computer
 
-  
-  
+# com_num1 = random.choice(cards)
+# com_num2 = random.choice(cards)
+# print(f'computers first hand: {com_num1}')
 
-    
+
+
+
+# # Player
+
+# new_card = input("Type 'y' to get a new card and 'n' to pass:\n").lower()
+
+# new_num = random.choice(cards)
+
+# if new_card == 'y':
+#     print(f'your cards are now {(num1, num2, new_num)}')
+# elif new_card == 'n':
+#     print('fine')
+# else:
+#     print('invalid')
+
+# print(f'The computers cards are now {(com_num1, com_num2)}')
+
+# player_add = num1, num2, new_num
+# sum_player = sum(player_add)
+# print(f'Your total is: {sum_player}')
+
+# com_add = com_num1, com_num2
+# sum_com = sum(com_add)
+# print(f'The computers total is: {sum_com}')
+
+# one = 12
+# two = 10
+# num = one, two
+# mid = sum(num)
+# print(mid)
+
+# # bid = (22, 22)
+# # print(bid)
+
+
+# if sum_player > sum_com:
+#     if sum_player < mid:
+#         print("You Win")
+#     else:
+#         print('Computer Wins')
+# elif sum_com > sum_player:
+#     if sum_com < mid:
+#         print("Computer Wins")
+#     else:
+#         print("You Win")
+# else:
+#     print('No winner')
+
+
+
+
+
+# Scope
+
+# Local Scope
+
+# def drink_potion():
+#     potion_strength = 2
+#     print(potion_strength)
+
+# drink_potion()
+
+
+# Global Scope
+
+# player_health = 10
+
+# def drink_potion():
+#     print(player_health)
+
+# drink_potion()
+
+
+
+
+
+# Debugging
+
+
+# Describing the problem
+
+# def my_function():
+#   for i in range(1, 21):
+#       if i == 20:
+#         print("you got it")
+# my_function()
+
+
+# Reproduce the Bug
+
+# from random import randint
+# dice_imgs = ["1", "2", "3", "4", "5", "6"]
+# dice_num = randint(0, 5)
+# print(dice_imgs[dice_num])
+
+
+# Play computer
+
+year = int(input("What's your year of birth?"))
+if year > 1980 and year < 1994:
+    print("you are a millenial")
+elif year > 1994:
+  print("you are a Gen Z.")
+
+
+# Debugging with pythonTutor
 
 
